@@ -1,0 +1,62 @@
+::-webkit-details-marker { display:none; }
+
+.ticket{
+    
+  list-style-type: none;
+align-self: flex-start;
+    width:25%;
+    text-align: left;
+    line-height: 1.2;
+   margin: 20px;
+    display:inline-block;
+      position:relative;
+      
+      cursor:pointer;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+       border-radius: 5px;
+       max-height: 91vh;
+    overflow: auto;
+    transition: .3s all ease-in-out;
+    
+}
+
+
+.moreDetails{
+    background-color:#0275d8;
+    color: white;
+    padding: 10px 10px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    
+    border-radius: 5px;
+    margin: 0 auto;
+  
+  overflow:hidden;
+    transition: .5s all ease-in-out;
+    
+  }
+  details{
+    max-height: 10em;
+    
+  }
+  details[open]{
+    max-height: 91vh;
+overflow: hidden;
+    transition: .5s all ease-in-out;
+  }
+
+
+  .date{
+      text-align:center;
+     padding:0;
+  }
+
+p{
+    padding:20px;
+}
+
+h2{
+    text-align: center;
+    font-size: 1rem;
+}
