@@ -83,7 +83,17 @@ const findId =(event)=>{
 
   // Prevent form submission reloading the whole page.
   event.preventDefault()
- 
+
+  // Check if the ticket is already present on the page.
+ let ticketLocal =tickets.filter(ticket =>
+   ticket.id == Id
+ )
+
+ if(ticketLocal.length > 0){
+   setTickets(ticketLocal)
+ }
+
+ else{
 
   ticketsService.getTicketById(Id)
   .then(serverTickets => {
@@ -100,13 +110,15 @@ setErrorMessage('')
 setLoadingMessage('')
 
     // Rerender our tickets array with the ticket matching the id.
-    // When searching for Id of one an array is returned with 3 items due to it being solved/replied to so had to take 1st element (the ticket)
+    // When searching for Id of ticket Id '1' an array is returned with 3 items due to it being solved/replied to so had to take 1st element (the ticket)
     setTickets([newTickets[0]])
     }
   
     
   })
   .catch(err =>{  setErrorMessage('error there is no ticket matching this Id in the database')})
+
+}
   }
 
 

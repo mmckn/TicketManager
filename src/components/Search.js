@@ -1,5 +1,5 @@
 import React from 'react'
-import './Page.css'
+import './Search.css'
 
 
 
@@ -8,13 +8,13 @@ const Search= ({ Id, handleIdChange, findId}) => {
 
   return (
         
-     <div>
+     <div className = "IdForm">
     <form onSubmit={findId}>
     <label>
-      <input placeholder="Enter ticket Id here"value={Id} onChange={handleIdChange} />
+      <input className="IdSearchBox" placeholder="Enter ticket Id here"value={Id} onChange={handleIdChange} />
     </label>
 
-    <button type="submit" value="Submit"> Find ticket </button>
+    <button className="searchButton" type="submit" value="Submit"> Find ticket </button>
   </form>
 
   </div>
