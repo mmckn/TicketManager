@@ -1,5 +1,5 @@
 import React from 'react'
-import './Ticket.css'
+import '../style/Ticket.css'
 
 
 

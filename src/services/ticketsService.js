@@ -7,12 +7,10 @@ const baseUrl = 'http://localhost:3002/api/tickets/'
 
 const getPage = (pageNumber) => {
     const request = axios.get(baseUrl +"page/" + pageNumber)
-    console.log(request)
-  console.log(request)
+    
   
     return request.then(response => response)
-    .catch(response => response)
-
+    
 }
 
 const getAmount = () => {
